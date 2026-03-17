@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📘 TNPSC தமிழ் தகுதி & மதிப்பீடு | 8 வாரக் கற்கை</title>
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #e6d5b8 0%, #c9b585 100%);
+            font-family: 'Segoe UI', 'Tamil', 'Latha', 'Helvetica Neue', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 25px 12px;
+            animation: bgShift 18s infinite alternate ease;
+        }
+
+        @keyframes bgShift {
+            0% { background: linear-gradient(145deg, #e6d5b8, #c9b585); }
+            50% { background: linear-gradient(225deg, #f0e1c6, #b89e6a); }
+            100% { background: linear-gradient(145deg, #dac9a8, #c0a16b); }
+        }
+
+        .master-wrap {
+            max-width: 1300px;
+            width: 100%;
+        }
+
+        /* ========== HERO SECTION STYLES ========== */
+        .hero-glow {
+            background: rgba(255, 248, 235, 0.9);
+            backdrop-filter: blur(20px);
+            border-radius: 70px 70px 70px 20px;
+            padding: 40px 35px;
+            box-shadow: 0 40px 60px -20px rgba(0, 20, 40, 0.5), 0 0 0 3px rgba(195, 120, 50, 0.5) inset, 0 0 40px #d4a373;
+            margin-bottom: 40px;
+            animation: floatHero 6s infinite alternate ease-in-out;
+            border-right: 8px solid #b85e2c;
+            border-left: 8px solid #2a6f97;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        @keyframes floatHero {
+            0% { transform: translateY(0px) scale(1); }
+            100% { transform: translateY(-12px) scale(1.005); }
+        }
+
+        .hero-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .hero-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(145deg, #4a251c, #7b3f2a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .version-badge {
+            background: linear-gradient(145deg, #ffbc6e, #e68a2e);
+            padding: 8px 25px;
+            border-radius: 80px;
+            font-size: 2rem;
+            color: #2b1b0e;
+            box-shadow: 0 5px 0 #9e5e1e;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .hero-sub {
+            font-size: 1.4rem;
+            font-weight: 600;
+            background: rgba(255, 245, 220, 0.5);
+            backdrop-filter: blur(10px);
+            padding: 10px 25px;
+            border-radius: 60px;
+            margin-bottom: 20px;
+            border: 2px solid rgba(200, 120, 30, 0.5);
+            display: inline-block;
+            color: #4a2e1a;
+        }
+
+        .advisor-chip {
+            background: linear-gradient(145deg, #1e4a5f, #0e3442);
+            color: #ffd966;
+            padding: 18px 35px;
+            border-radius: 100px;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin: 15px 0;
+            border: 3px solid #ffb554;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            animation: chipGlow 3s infinite;
+            flex-wrap: wrap;
+        }
+
+        @keyframes chipGlow {
+            0% { box-shadow: 0 0 5px #ffb554; }
+            50% { box-shadow: 0 0 20px #ffd58c; }
+            100% { box-shadow: 0 0 5px #ffb554; }
+        }
+
+        .advisor-chip i {
+            color: #ffd966;
+            font-size: 2rem;
+        }
+
+        .qualification-box {
+            font-size: 1.2rem;
+            background: linear-gradient(145deg, #2d4b65, #1d3342);
+            color: #ffffff;
+            padding: 15px 28px;
+            border-radius: 60px;
+            margin: 15px 0;
+            border-left: 8px solid #f1c40f;
+            border-right: 8px solid #f1c40f;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .qualification-box i {
+            color: #f1c40f;
+            margin-right: 10px;
+        }
+
+        .position-box {
+            font-size: 1.2rem;
+            background: rgba(255, 250, 240, 0.95);
+            color: #1e3f5c;
+            padding: 15px 30px;
+            border-radius: 60px;
+            border: 3px solid #e68a2e;
+            box-shadow: 0 8px 0 #a8621a;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            flex-wrap: wrap;
+        }
+
+        .profile-container {
+            flex-shrink: 0;
+            text-align: center;
+            margin: 10px auto;
+        }
+
+        .profile-glow {
+            position: relative;
+        }
+
+        .glow-effect {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: radial-gradient(circle, rgba(255, 180, 60, 0.7) 0%, rgba(255, 180, 60, 0) 70%);
+            border-radius: 50%;
+            animation: pulseGlow 3s infinite;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid #e68a2e;
+            box-shadow: 0 30px 40px rgba(0,0,0,0.4), 0 0 50px #ffb347;
+            animation: profileFloat 6s infinite ease-in-out;
+            position: relative;
+            z-index: 10;
+        }
+
+        @keyframes profileFloat {
+            0%,100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-15px) scale(1.02); }
+        }
+
+        @keyframes pulseGlow {
+            0%,100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.1); }
+        }
+
+        .profile-badge {
+            margin-top: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            color: #ffbc6e;
+            padding: 8px 20px;
+            border-radius: 60px;
+            font-weight: 600;
+            border: 2px solid #e68a2e;
+            display: inline-block;
+        }
+
+        /* ========== 8 வார கற்றல் அட்டவணை (அட்டை வடிவம்) ========== */
+        .week-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin: 45px 0 30px;
+        }
+
+        .week-card {
+            background: rgba(255, 250, 240, 0.9);
+            backdrop-filter: blur(16px);
+            border-radius: 60px 20px 60px 20px;
+            padding: 18px 30px 18px 25px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            box-shadow: 0 20px 25px -10px #4d3e2b, 0 0 0 2px #f0cf9f inset;
+            border-left: 20px solid;
+            transition: 0.2s;
+            animation: cardRise 0.8s backwards;
+        }
+
+        .week-card:nth-child(1) { animation-delay: 0.0s; border-left-color: #9b5e2e; }
+        .week-card:nth-child(2) { animation-delay: 0.1s; border-left-color: #2c6e49; }
+        .week-card:nth-child(3) { animation-delay: 0.2s; border-left-color: #b5482c; }
+        .week-card:nth-child(4) { animation-delay: 0.3s; border-left-color: #3f6894; }
+        .week-card:nth-child(5) { animation-delay: 0.4s; border-left-color: #b8872d; }
+        .week-card:nth-child(6) { animation-delay: 0.5s; border-left-color: #944e7c; }
+        .week-card:nth-child(7) { animation-delay: 0.6s; border-left-color: #2f8f7a; }
+        .week-card:nth-child(8) { animation-delay: 0.7s; border-left-color: #ba6b2c; }
+
+        @keyframes cardRise {
+            0% { opacity: 0; transform: translateX(-50px) scale(0.9); }
+            100% { opacity: 1; transform: translateX(0) scale(1); }
+        }
+
+        .week-number {
+            background: #4a2e1a;
+            color: #ffd98c;
+            min-width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 2rem;
+            box-shadow: 0 15px 0 #2e1c0e, 0 20px 30px #281e0e;
+            border: 3px solid #eba031;
+        }
+
+        .week-number span {
+            font-size: 0.9rem;
+            background: #eba031;
+            color: black;
+            padding: 3px 10px;
+            border-radius: 40px;
+            margin-top: 5px;
+        }
+
+        .week-content {
+            flex: 1;
+        }
+
+        .week-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #372412;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .unit-badge {
+            background: #77450e;
+            color: #fbdd9b;
+            padding: 5px 18px;
+            border-radius: 50px;
+            font-size: 1rem;
+        }
+
+        .week-desc {
+            font-size: 1.1rem;
+            margin: 10px 0 5px;
+            color: #252016;
+        }
+
+        .tnpsc-snip {
+            background: #2d4a5b;
+            color: #f0e68c;
+            padding: 8px 20px;
+            border-radius: 60px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1rem;
+            border: 2px solid #eba031;
+        }
+
+        .arrow-toggle {
+            font-size: 2.2rem;
+            color: #8b5a2b;
+            cursor: pointer;
+            transition: 0.2s;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .arrow-toggle:hover {
+            transform: scale(1.2);
+            color: #d48b2c;
+        }
+
+        /* விரிவான பகுதி */
+        .week-expand {
+            display: none;
+            background: #fff6e5;
+            border-radius: 40px;
+            padding: 30px 35px;
+            margin-top: 20px;
+            border: 3px dashed #c59b6b;
+            box-shadow: inset 0 0 30px #ffe9c4;
+            width: 100%;
+        }
+
+        .expand-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .tamizh-card {
+            background: #2c1e12;
+            color: #ffdb9d;
+            padding: 20px 25px;
+            border-radius: 30px;
+            flex: 1;
+            min-width: 230px;
+            border: 3px solid #e6b450;
+        }
+
+        .exam-card {
+            background: #193549;
+            color: #c3e88d;
+            padding: 20px 25px;
+            border-radius: 30px;
+            flex: 1;
+            min-width: 230px;
+            border: 3px solid #f7d44a;
+        }
+
+        .btn-watch {
+            background: #ba5a2b;
+            color: white;
+            padding: 15px 35px;
+            border-radius: 70px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 8px 0 #642f12;
+            margin-top: 15px;
+            border: 2px solid #ffc107;
+            transition: 0.2s;
+        }
+
+        .btn-watch:hover {
+            background: #d46b36;
+            transform: translateY(-3px);
+        }
+
+        /* ========== கீழ்ப்பகுதி ========== */
+        .footer-deep {
+            background: #262216;
+            color: #efdcb5;
+            border-radius: 100px 100px 40px 40px;
+            padding: 40px 40px 50px;
+            margin-top: 80px;
+            border: 5px solid #c49a6c;
+            box-shadow: 0 40px 50px #271e12;
+            text-align: center;
+        }
+
+        .contact-glow {
+            background: #41301c;
+            display: inline-flex;
+            align-items: center;
+            gap: 25px;
+            padding: 18px 45px;
+            border-radius: 100px;
+            border: 3px solid #f1c40f;
+            font-size: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .unit-summary {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .unit-pill {
+            background: #4a3722;
+            color: #ffd98c;
+            padding: 12px 24px;
+            border-radius: 60px;
+            font-weight: bold;
+            border: 2px solid #b87c2e;
+        }
+
+        @media (max-width: 700px) {
+            .hero-title { font-size: 2.2rem; }
+            .hero-glow { flex-direction: column; text-align: center; }
+            .advisor-chip { font-size: 1.2rem; padding: 12px 20px; }
+            .position-box { font-size: 1rem; padding: 12px 20px; }
+            .profile-img { width: 150px; height: 150px; }
+            .week-card { flex-direction: column; text-align: center; }
+            .contact-glow { font-size: 1.4rem; padding: 15px 25px; }
+        }
+    </style>
+</head>
+<body>
+<div class="master-wrap">
+
+    <!-- ========== HERO SECTION WITH PROFILE PHOTO ========== -->
+    <div class="hero-glow">
+        <div class="hero-content">
+            <!-- முக்கிய தலைப்பு -->
+            <div class="hero-title">
+                📚 தமிழ்நாடு அரசு குடிமைப் பணித் தேர்வு - IV
+                <span class="version-badge">பகுதி இ</span>
+            </div>
+            
+            <!-- ஆங்கில துணைத் தலைப்பு -->
+            <div class="hero-sub">
+               Tamil Eligibility cum Entrance Test (SSLC Standard)
+            </div>
+            
+            <!-- பயிற்றுநர் பெயர் -->
+            <div class="advisor-chip">
+                <i class="fas fa-crown"></i> 
+                பயிற்றுநர்: முனைவர் சத்தியராஜ் தங்கச்சாமி <br> கல்.இ., க.மு. (தமிழ்), க.மு. (மொழியியல்), ஆ.நி., த.ப.ப., பர்., (நேயக்கோ)
+            </div>
+            
+            <!-- பட்டங்கள் -->
+            <div class="qualification-box">
+                <i class="fas fa-graduation-cap"></i> 
+                Dr. Sathiyaraj Thangasamy (Neyakkoo) <br> B.Lit., M.A. (Tamil), M.A. (Linguistics), M.Phil., TPT., Ph.D., NET.,
+            </div>
+            
+            <!-- பதவி விவரம் -->
+            <div class="position-box">
+                <i class="fas fa-briefcase"></i>
+                Coach & Distributor, MiLifeStyle Marketing Global Pvt. Ltd.
+                <i class="fas fa-check-circle"></i>
+            </div>
+        </div>
+        
+        <!-- வலப்பக்கத்தில் வட்ட வடிவில் இயங்கும் ஒளிப்படம் -->
+        <div class="profile-container">
+            <div class="profile-glow">
+                <div class="glow-effect"></div>
+                <img src="https://raw.githubusercontent.com/neyakkoot/Direct_Selling_Course/main/Sathiyaraj.png"
+                     alt="Dr. Sathiyaraj Thangasamy"
+                     class="profile-img"
+                     onerror="this.style.display='none'; this.parentElement.style.display='none';">
+            </div>
+            <div class="profile-badge">
+                <i class="fas fa-star"></i> பயிற்றுநர் <i class="fas fa-star"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== பாட அலகுகள் சுருக்கம் ========== -->
+    <div class="unit-summary">
+        <span class="unit-pill"><i class="fas fa-book"></i> அலகு I: இலக்கணம் (25)</span>
+        <span class="unit-pill"><i class="fas fa-book"></i> அலகு II: சொல்லகராதி (15)</span>
+        <span class="unit-pill"><i class="fas fa-book"></i> அலகு III: எழுதும் திறன் (15)</span>
+        <span class="unit-pill"><i class="fas fa-book"></i> அலகு IV: கலைச்சொற்கள் (10)</span>
+        <span class="unit-pill"><i class="fas fa-book"></i> அலகு V: வாசித்தல் (15)</span>
+        <span class="unit-pill"><i class="fas fa-book"></i> அலகு VI: மொழிபெயர்ப்பு (5)</span>
+        <span class="unit-pill"><i class="fas fa-book"></i> அலகு VII: இலக்கியம் (15)</span>
+    </div>
+
+    <!-- ========== 8 வாரப் பாட அட்டவணை (TNPSC தமிழ் பாடத்திட்டம்) ========== -->
+    <div class="week-grid" id="weekGrid"></div>
+
+    <!-- ========== மேலதிக தகவல் (சான்று/தொடர்பு) ========== -->
+    <div class="footer-deep">
+        <div style="font-size:2.3rem; color:#ffd966;"><i class="fas fa-certificate"></i> 8 வார TNPSC தமிழ் தகுதித் தேர்வு பயிற்சி</div>
+        <div style="font-size:1.5rem; margin:20px 0;">மொத்தம் 100 கேள்விகள் · பத்தாம் வகுப்புத் தரம் · அலகுகள் I-VII</div>
+        <div class="contact-glow">
+            <i class="fas fa-phone-alt"></i> +91 9600370671 
+            <i class="fab fa-whatsapp" style="color:#25D366;"></i> 
+            <i class="fas fa-envelope"></i> sathiyarajkkt@gmail.com
+        </div>
+        <div style="margin-top: 35px;">
+            <i class="fas fa-video" style="color: #f39c12;"></i> ஒவ்வொரு வாரமும் மாதிரி வினாக்கள் · விளக்கக் காணொலி · மரபுத் தமிழ்ப் பயிற்சி
+        </div>
+    </div>
+</div>
+
+<!-- ========== மாறும் உள்ளடக்கம் JavaScript ========== -->
+<script>
+    (function() {
+        const weekPlan = [
+            { week:1, title:"அலகு I: இலக்கணம் - பகுதி 1 (எழுத்தியல்)", icon:"🔤",
+              desc:"எழுத்து: பிரித்து எழுதுதல், சேர்த்து எழுதுதல், சந்திப்பிழை, குறில்-நெடில், ல-ள-ழ, ன-ண, ர-ற வேறுபாடுகள்.",
+              unit:"அலகு I", unitNo:1, part:"எழுத்து (25)",
+              tam:"இனவெழுத்துகள், சுட்டெழுத்துகள், வினா எழுத்துகள், ஒருமை-பன்மை அறிதல்", 
+              exam:"எ.கா: 'குறில், நெடில்' - கு (குறில்) vs கூ (நெடில்). லகர-ளகர-ழகர: புலி, புளி, பழி.",
+              link:"https://meyveendu.blogspot.com/2026/03/tnpsc-unit1-part1.html"},
+
+            { week:2, title:"அலகு I: இலக்கணம் - பகுதி 2 (சொல்லியல்)", icon:"📝",
+              desc:"சொல்: வேர்ச்சொல், வினைமுற்று, வினையெச்சம், வினையாலணையும் பெயர், பெயரெச்சம்.",
+              unit:"அலகு I", unitNo:1, part:"சொல் (தொடர்ச்சி)",
+              tam:"அயற்சொல்-தமிழ்ச்சொல், எதிர்ச்சொல், வினைச்சொல், எழுத்துப் பிழை, ஒற்றுப்பிழை",
+              exam:"எ.கா: வேர்ச்சொல் 'செய்' → வினைமுற்று 'செய்கிறான்'. ஒற்றுப் பிழை: முன்னே+ற்றம் = முன்னேற்றம் (சரி).",
+              link:"https://meyveendu.blogspot.com/2026/03/tnpsc-unit1-part2.html"},
+
+            { week:3, title:"அலகு II: சொல்லகராதி - பகுதி 1", icon:"🗣️",
+              desc:"எதிர்ச்சொல், ஓரெழுத்து ஒருமொழி, ஒருபொருள் பன்மொழி, இருபொருள் குறிக்கும் சொற்கள்.",
+              unit:"அலகு II", unitNo:2, part:"சொற்கள் (15)",
+              tam:"பேச்சுவழக்கு, எழுத்துவழக்கு, சொல்லும் பொருளும், கோடிட்ட இடத்தில் சரியான சொல்",
+              exam:"எ.கா: பள்ளிக்குச் சென்று கல்வி ______ (பயிலுதல்). வானில் ______ (முகில்).",
+              link:"https://meyveendu.blogspot.com/2026/03/tnpsc-unit2-part1.html"},
+
+            { week:4, title:"அலகு II: சொல்லகராதி - பகுதி 2", icon:"🌍",
+              desc:"ஊர்ப் பெயர்களின் மரூஉ, பிழை திருத்தம், பேச்சு வழக்கில் இருந்து தூய தமிழ்ச் சொற்கள்.",
+              unit:"அலகு II", unitNo:2, part:"மரூஉ & பிழை திருத்தம்",
+              tam:"மரூஉ: புதுச்சேரி-புதுவை, மன்னார்குடி-மன்னை. பேச்சுவழக்கு: வெத்தில → வெற்றிலை",
+              exam:"தொடர் பிழை திருத்தம்: 'நேத்து மழ பேஞ்சுது' → 'நேற்று மழை பெய்தது'",
+              link:"https://meyveendu.blogspot.com/2026/03/tnpsc-unit2-part2.html"},
+
+            { week:5, title:"அலகு III: எழுதும் திறன்", icon:"✍️",
+              desc:"சொற்றொடர் அமைத்தல், செய்வினை-செயப்பாட்டுவினை, தன்வினை-பிறவினை, ஒருமை-பன்மை பிழை.",
+              unit:"அலகு III", unitNo:3, part:"தொடர் வகைகள் (15)",
+              tam:"மரபுத் தமிழ்: திணை, பால், காலம். இளமைப்பெயர், ஒலிமரபு, வினைமரபு.",
+              exam:"எ.கா: நாய் கத்தியது (தவறு) → நாய் குரைத்தது (சரி). மாடுகள் நனைந்தது → மாடுகள் நனைந்தன.",
+              link:"https://meyveendu.blogspot.com/2026/03/tnpsc-unit3.html"},
+
+            { week:6, title:"அலகு IV & VI: கலைச்சொற்கள் & மொழிபெயர்ப்பு", icon:"🌐",
+              desc:"பல்துறை கலைச்சொற்கள் (அறிவியல், மருத்துவம், சட்டம், தொழில்நுட்பம்) & ஆங்கிலம்-தமிழ் மொழிபெயர்ப்பு.",
+              unit:"அலகு IV, VI", unitNo:4, part:"கலைச்சொற்கள் (10+5)",
+              tam:"Search Engine-தேடுபொறி, Allergy-ஒவ்வாமை, Migration-வலசை, Gene-மரபணு",
+              exam:"pendrive-கைப்படி, printer-அச்சுப்பொறி, computer-கணினி, keyboard-விசைப்பலகை",
+              link:"https://meyveendu.blogspot.com/2026/03/tnpsc-unit4-6.html"},
+
+            { week:7, title:"அலகு V & VII: வாசித்தல் & இலக்கியம் பகுதி 1", icon:"📖",
+              desc:"பத்தியிலிருந்து விடைகாணல், உவமைத் தொடர், மரபுத் தொடர், பழமொழிகள் & திருக்குறள் (20 அதிகாரங்கள்).",
+              unit:"அலகு V, VII", unitNo:5, part:"வாசித்தல் (15) & திருக்குறள்",
+              tam:"குறள்: ஒழுக்கமுடைமை, பொறையுடைமை, ஊக்கமுடைமை, விருந்தோம்பல், அறன்வலியுறுத்தல், ஈகை, கல்வி",
+              exam:"'எப்பொருள் யார்யார்வாய்க் கேட்பினும்' - உவமைத்தொடர். பழமொழி: 'ஆயிரம் பேருக்கு முன் அடங்கு'",
+              link:"https://meyveendu.blogspot.com/2026/03/tnpsc-unit5-7-part1.html"},
+
+            { week:8, title:"அலகு VII: இலக்கியம் பகுதி 2 & தமிழ்த்தொண்டு", icon:"🏛️",
+              desc:"அறநூல்கள் (நாலடியார், நான்மணிக்கடிகை, முதுமொழிக்காஞ்சி), தமிழ்ச் சான்றோர்கள், தமிழ்த்தொண்டு.",
+              unit:"அலகு VII", unitNo:7, part:"அறநூல் & தமிழ்ப்பணி (15)",
+              tam:"உ.வே.சாமிநாதையர், தேவநேயப்பாவாணர், ஜி.யு.போப், வீரமாமுனிவர், பாவேந்தர், கண்ணதாசன், வேலுநாச்சியார்",
+              exam:"திராவிட மொழிகள், அகரமுதலி, பாவலரேறு பெருஞ்சித்திரனார், நாமக்கல் கவிஞர்",
+              link:"https://meyveendu.blogspot.com/2026/03/tnpsc-unit7-part2.html"}
+        ];
+
+        const container = document.getElementById('weekGrid');
+        container.innerHTML = '';
+
+        weekPlan.forEach((w, idx) => {
+            const card = document.createElement('div');
+            card.className = 'week-card';
+
+            // இடது வார எண்
+            const weekDiv = document.createElement('div');
+            weekDiv.className = 'week-number';
+            weekDiv.innerHTML = `<div>${w.week}</div><span>வாரம்</span>`;
+
+            // மைய உள்ளடக்கம்
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'week-content';
+
+            const titleSpan = document.createElement('div');
+            titleSpan.className = 'week-title';
+            titleSpan.innerHTML = `${w.icon} ${w.title} <span class="unit-badge">${w.unit}</span>`;
+
+            const descP = document.createElement('div');
+            descP.className = 'week-desc';
+            descP.innerText = w.desc;
+
+            const codeDiv = document.createElement('div');
+            codeDiv.className = 'tnpsc-snip';
+            codeDiv.innerHTML = `<i class="fas fa-question-circle"></i> ${w.part} | முக்கிய கேள்விகள்: 5-10`;
+
+            contentDiv.appendChild(titleSpan);
+            contentDiv.appendChild(descP);
+            contentDiv.appendChild(codeDiv);
+
+            // வலம்புரி அம்பு (toggle)
+            const arrowSpan = document.createElement('div');
+            arrowSpan.className = 'arrow-toggle';
+            arrowSpan.id = `arrWeek${w.week}`;
+            arrowSpan.innerHTML = '➕';
+
+            // விரிவாக்கப் பகுதி
+            const expandDiv = document.createElement('div');
+            expandDiv.className = 'week-expand';
+            expandDiv.id = `expWeek${w.week}`;
+            expandDiv.innerHTML = `
+                <div class="expand-flex">
+                    <div class="tamizh-card">
+                        <i class="fas fa-pen-fancy" style="color:#f5cb7e;"></i> <strong>தமிழ் இலக்கண/இலக்கியச் சாரம்</strong><br><br>
+                        <p>${w.tam}</p>
+                    </div>
+                    <div class="exam-card">
+                        <i class="fas fa-pencil-alt"></i> <strong>தேர்வு மாதிரி / எடுத்துக்காட்டு</strong><br><br>
+                        <p>${w.exam}</p>
+                        <div style="background:#2a3f4f;padding:10px;border-radius:16px;margin-top:12px;">
+                            <i class="fas fa-lightbulb" style="color:#f7d44a;"></i> ${w.unit} | வாரம் ${w.week}
+                        </div>
+                    </div>
+                </div>
+                <a href="${w.link}" class="btn-watch" target="_blank"><i class="fas fa-play-circle"></i> காணொலி & வினாத்தாள்</a>
+            `;
+
+            // கார்டில் சேர்த்தல்
+            card.appendChild(weekDiv);
+            card.appendChild(contentDiv);
+            card.appendChild(arrowSpan);
+            card.appendChild(expandDiv);
+            container.appendChild(card);
+
+            // toggle நிகழ்வு
+            arrowSpan.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const expand = document.getElementById(`expWeek${w.week}`);
+                if (expand.style.display === 'none' || expand.style.display === '') {
+                    expand.style.display = 'block';
+                    arrowSpan.innerHTML = '➖';
+                } else {
+                    expand.style.display = 'none';
+                    arrowSpan.innerHTML = '➕';
+                }
+            });
+        });
+
+        // ஆரம்பத்தில் அனைத்து expand-களையும் மறை
+        document.querySelectorAll('.week-expand').forEach(el => el.style.display = 'none');
+    })();
+</script>
+
+</body>
+</html>
